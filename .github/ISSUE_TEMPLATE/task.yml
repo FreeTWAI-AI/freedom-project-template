@@ -1,0 +1,69 @@
+name: 共創任務
+description: 記錄一件可驗證的共創工作；分派由 repo 維護者確認。
+title: "[任務] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        請描述真實問題；此表單不會自動分派任務或授予 repo 權限。
+        認領者需在 Issue 留言說明範圍，取得維護者確認後再開分支。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 問題與使用者
+      description: 誰在什麼情境遇到問題？希望看見什麼改變？
+      placeholder: 身為……，當我……時，希望能……，以便……。
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 本輪範圍
+      description: 寫清楚要做的內容，以及本輪排除的內容。
+      placeholder: 要做的內容、涉及的畫面或檔案、明確不包含的內容。
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完成條件
+      description: 使用可觀察、可核對的結果，讓協作者知道怎樣算完成。
+      placeholder: |
+        - [ ] 在指定情境下可以觀察到……
+        - [ ] 既有行為……仍可正常使用
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: 驗證方式
+      description: 列出測試命令或人工核對步驟；指令仍需先閱讀與確認，不會由此表單自動執行。
+      placeholder: |
+        本模板程式修改：npm test、npm run build
+        本任務另外需要的步驟與預期結果：……
+    validations:
+      required: true
+  - type: dropdown
+    id: roles
+    attributes:
+      label: 需要的協作角色
+      description: 選擇這張任務實際需要的角色；可複選。
+      multiple: true
+      options:
+        - development
+        - testing
+        - design
+        - documentation
+        - marketing
+        - sales
+        - operations
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 依賴與需要協助
+      description: 連結相關 Issue、素材或需由誰確認的事項；若沒有依賴，明確寫「無已知依賴」。
+      placeholder: 依賴的 Issue、需要維護者確認的事項，或無已知依賴。
+    validations:
+      required: true
