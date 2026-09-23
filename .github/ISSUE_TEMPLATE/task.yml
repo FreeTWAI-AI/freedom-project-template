@@ -57,6 +57,9 @@ body:
         - marketing
         - sales
         - operations
+        - security
+        - music
+        - media
     validations:
       required: true
   - type: textarea
